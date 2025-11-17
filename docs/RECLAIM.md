@@ -2,7 +2,11 @@
 
 This md file is mostly we want to reclaim of my work since Cuynu post it but keep his name like he's contributing for our project
 
-We respect all of his project like MBCP which is a defferent ways to use MB Bank app if you can't hide root currently. We also respect that he added Rainy a an author after adding issues into his repo and make bshield fix reach more people. But that early test module cuynu post is a works of Jan, Rainy and S*X (I mostly call him Phenomica) only. These people who works for months to check what BSheild detects and go through this.
+We respect all of his project like MBCP which is a defferent ways to use MB Bank app if you can't hide root currently. We also respect that he added Rainy a an author after adding issues into his repo and make bshield fix reach more people. 
+
+But that early test module cuynu post is a works of Jan, Rainy and S*X (I mostly call him Phenomica) only. These people who works for months to check what BSheild detects and go through this.
+
+Unfortunately, Cuynu credited them but not remove him as an author of the module, which makes us unfair since **Cuynu** doesn't contribute anything to this project except make a module after that. Cuynu just get some fixing code from @fukiame (Which @Jan share to) and make it as a module. In the chat, he also said that don't share that early build. But despite all those warning, he still do that by the way deplorably.
 
 We write this md file to hope [Cuynu](https://github.com/cuynu) can help us to remove this repo and return the research / development to us:
 
