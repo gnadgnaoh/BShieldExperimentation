@@ -32,7 +32,8 @@ Most of image extracted from this issues in his repo: <https://gitlab.com/cuynu/
 |-|-|-|
 |![Alt text](../assets/photo_2025-07-14_19-13-28.jpg)|![Alt text](../assets/photo_2025-07-14_19-13-30.jpg)|![Alt text](../assets/photo_2025-07-14_19-13-32.jpg)|
 |![Alt text](../assets/photo_2025-07-14_19-13-34.jpg)|![Alt text](../assets/photo_2025-07-14_19-13-35.jpg)|![Alt text](../assets/photo_2025-07-14_19-13-37.jpg)|
-|![Alt text](../assets/photo_2025-07-14_19-13-44.jpg)|![Alt text](../assets/photo_2025-11-16_21-34-05.jpg)||
+|![Alt text](../assets/photo_2025-07-14_19-13-44.jpg)|![Alt text](../assets/photo_2025-11-16_21-34-05.jpg)|![Alt text](../assets/photo_2025-11-16_21-34-05.jpg)|
+|![Alt text](../assets/photo_2025-11-17_19-25-41.jpg)|![Alt text](../assets/photo_2025-11-17_19-26-48.jpg)|![Alt text](../assets/photo_2025-11-17_19-28-31.jpg)|
 
 ## After words
 
