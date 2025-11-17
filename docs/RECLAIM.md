@@ -12,8 +12,6 @@ We write this md file to hope [Cuynu](https://github.com/cuynu) can help us to r
 
 If Cuynu or any people have any issues with me aboout this project or need more explaination, feel free to contact me on support channel I list in [README.md](../README.md)
 
-Or if Cuynu still don't want to remove, don't worry since people will recognize this project as my work with some proof image I list below.
-
 ## Image Proof or Work
 
 Here's some image that get from older phone about the first time found that interestingly easy fix.
