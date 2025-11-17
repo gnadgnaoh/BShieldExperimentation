@@ -12,14 +12,6 @@ This project is already implemented in some vietnamee app like: VNeID, Techcomba
 
 We can see more on [docs/DETECTION.md](docs/DETECTION.md)
 
-## Project reclaim
-
-You might see some BShield bypass module in Gitlab or Disroot by **Cuynu**. But the module is really not from him but rather than a share from user named **@fukiame** on Telegam forward to (**@Jan** share our early development module to **@fukiame** before that)
-
-What we want from here is not want him to shuffer with his action, but want him to return give back the development to us and remove his repo
-
-For why I reclaim it, see [docs/RECLAIM.md](docs/RECLAIM.md)
-
 ## Community
 
 - DeepinRain Telegram Channel: <https://t.me/deepinrain>
