@@ -21,6 +21,7 @@ These properties can be hidden easily by overriding them, for example:
 
 ```sh
 resetprop -n -p init.svc.adb_root ""
+resetprop -n -p service.adb.root ""
 ```
 
 ## Maps detection
