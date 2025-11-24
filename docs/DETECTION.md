@@ -1,15 +1,23 @@
-# BShield Detection in Android
+<p align="center">
+  <img src="https://git.bnamm.org/namm/BSE-Improved/raw/branch/main/assets/detectionlist.png" width="800" />
+</p>
 
-This documents will list of all detection that BShield detected in android. The date of this documents is **November 16th, 2025** so if you know what BShield detects more, feel free to report on Github issues tab.
+<p align="center">
+  <strong>This document lists all the detections observed in BShield for Android. The information is accurate as of November 16th, 2025. If you discover additional detections, feel free to report them in the Issues tab.</strong>
+</p>
 
-## Android System Properties
+> [!CAUTION]
+> **This project is for educational purposes only. The intention is to highlight the weaknesses of current security solutions and to encourage the development of better, more reliable alternatives. Use this information responsibly. Do NOT use this for malicious intent. I am not responsible for the actions taken by users of this module or project.**
 
-BShield detects some of system properties we can take a look at:
+## System properties
 
-- init.svc.adb_root
-- service.adb.root
+BShield also detects certain Android system properties. Some known examples include:
 
-With this kind of detection, we can easily hide it by using:
+- `init.svc.adb_root`
+- `service.adb.root`
+
+**Solution:**  
+These properties can be hidden easily by overriding them, for example:
 
 ```sh
 resetprop -n -p init.svc.adb_root ""
@@ -17,31 +25,41 @@ resetprop -n -p init.svc.adb_root ""
 
 ## Maps detection
 
-BShield also detect whenever maps contains lineage or injection or not. With this we can check from [Native Detector](https://dl.reveny.me/) (Found Injection Detecton or LineageOS Detected (14) from what I remembered) or do example command:
+BShield can also detect whether the memory maps contain traces of **LineageOS** or injection-related entries.  
+
+You can verify this using the **Native Detector** tool ([download](https://dl.reveny.me/)). 
+
+For example, it may report "Injection Detection" or "LineageOS Detected (14)".  
+Alternatively, you can check manually with:
 
 ```sh
 cat /proc/self/maps | grep "lineage"
 ```
 
-For solution, is quite hard to hide so you may need to changes the AOSP / Pixel based custom rom to avoid this lineage trace.
+**Bypassing maps detection:**
 
-If you have kernel with KernelSU + SuSFS (SUS_MAP enabled), you can add the leaked map in sus map path (using [sidex's susfs module](https://github.com/sidex15/susfs4ksu-module))
+Hiding these entries is difficult. To avoid LineageOS traces, you may need to modify your AOSP/Pixel-based custom ROM.
 
-If you're using font module, is neccessary to remove it or just out it's path to SUS_MAP like I said above
+**Here is some solution:**
+- If your kernel supports KernelSU + SuSFS (with SUS_MAP enabled), you can add the leaked map paths to the SuSFS map list. 
+- If you're using font module, it may also leak map entries. Remove it or add its paths to SUS_MAP as mentioned above.
+- You can also try Pedro's TreatWheel module to hide maps, but its effectiveness is limited and it requires a ReZygisk build to operate.
 
-You maybe can try Pedro's TreatWheel module to hide not I don't think it's really working and yes it will need ReZygisk build to operate
+## Enforcing status
 
-## Enforcing Status
+This is a common detection used by many applications. It is strongly recommended **not** to use a custom ROM with **permissive SELinux**, as it is considered insecure by modern standards.
 
-This is the classic detection on most of the app. Now I really don't recommended to use custom rom with **permissive selinux** since it's insecure in this modern day.
+If your ROM is running with **permissive SELinux**, certain attacks may be possible. BShield requires **SELinux** to be set to **Enforced** to function properly.
 
-If you're using rom with **permissive selinux**, you may experience with some attacks. BSheild also required **SElinux** to be **Enforced** respectfully
+**Solution:**
+- Set SELinux to **Enforcing**
+- Use a kernel or ROM with **Enforcing SELinux**
 
-## Android package name detection
+## Package name detection
 
-Another classic detection from most of app, it will read the list of app to see which app is for root users
+Another classic detection used by many applications, BShield checks the installed app list to identify apps commonly associated with root access.
 
-Some list of app that BShield detected right now (it will have more app but since I only have tested this app, you can ask me to update in issues tab):
+Below is the list of apps that BShield currently detects (there may be more; these are only the ones confirmed through testing. Feel free to request updates in the Issues tab):
 
 ```txt
 com.rifsxd.ksunext
@@ -51,19 +69,27 @@ com.topjohnwu.magisk
 com.drdisagree.iconify
 ```
 
-For solution, you can use combination like [ReLspoed](https://github.com/ThePedroo/ReLSPosed) + [HMA-OSS](https://github.com/frknkrc44/HMA-OSS) to hide.
+**Solution:**
+You can use a combination such as:
 
-## Leaks from custom Launcher
+- [ReLSPosed](https://github.com/ThePedroo/ReLSPosed)
+- [HMA-OSS](https://github.com/frknkrc44/HMA-OSS)
 
-I have not much idea about detection, but BShield have ability to detect most of custom launcher module. Maybe it's from mounts, maps,...
+to hide these apps.
 
-The only solution for me is to remove those launchers and use the default one. Or we can just use app launchers, it does not matter much
+## Leaks from custom launchers
+
+BShield can detect many custom launcher modules, possibly through mounts, memory maps, or other indicators. 
+
+**Solution:**  
+The simplest approach is to remove custom launchers and use the default system launcher. Alternatively, using standard app launchers typically does not trigger detection.
 
 ## [UNCONFIRMED] JNI hook detection
 
-In the some release of VNeID, BSheild can detect if the app hooked on it. This issues may have been resolved in newer ReZygisk CI version and ZygiskNext version.
+In some releases of VNeID, BShield was able to detect if the app was being hooked. This issue may have been resolved in newer versions of **ReZygisk CI** and **ZygiskNext**.
 
-If you still have it, may check your ReZygisk or ZygiskNext version
+**Solution:**  
+If you are still experiencing this detection, check your ReZygisk or ZygiskNext version.
 
 ## [UNCONFIRMED] Bootloader check, sys call check?
 
@@ -75,6 +101,12 @@ Currently we don't know what it detects but current solution is to put their pac
 com.vnid
 ```
 
-## Disclaimer
+## [UNCONFIRMED] Bootloader check, `syscall` check
 
-This project is for educational purposes only. The intention is to highlight the weaknesses of current security solutions and to encourage the development of better, more reliable alternatives. Use this information responsibly. Do NOT use this for malicious intent. I am not responsible for the actions taken by users of this module or project.
+In recent versions of VNeID (CA-E005 error), the app behaves strangely, such as kicking the user out after already logging in. The detection response also appears slower than usual.
+
+It is currently unclear what BShield is detecting here. 
+
+**Solution:**  
+A temporary workaround is to add the package name (`com.vnid`) to the **TrickyStore** `target.txt` file.  
+Open the Tricky Addon WebUI, select VNeID, press **Save**, and you’re done!
