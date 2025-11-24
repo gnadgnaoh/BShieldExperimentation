@@ -24,6 +24,8 @@ resetprop -n -p init.svc.adb_root ""
 resetprop -n -p service.adb.root ""
 ```
 
+**Note:** These properties will reset on reboot.
+
 ## Maps detection
 
 BShield can also detect whether the memory maps contain traces of **LineageOS** or injection-related entries.  
