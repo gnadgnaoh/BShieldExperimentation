@@ -1,10 +1,6 @@
-<p align="center">
-  <img src="https://git.bnamm.org/namm/BSE-Improved/raw/branch/main/assets/detectionlist.png" width="800" />
-</p>
+# BShield Detection in Android
 
-<p align="center">
-  <strong>This document lists all the detections observed in BShield for Android. The information is accurate as of November 16th, 2025. If you discover additional detections, feel free to report them in the Issues tab.</strong>
-</p>
+This document lists all the detections observed in BShield for Android. The information is accurate as of November 16th, 2025. If you discover additional detections, feel free to report them in the Issues tab.
 
 > [!CAUTION]
 > **This project is for educational purposes only. The intention is to highlight the weaknesses of current security solutions and to encourage the development of better, more reliable alternatives. Use this information responsibly. Do NOT use this for malicious intent. I am not responsible for the actions taken by users of this module or project.**
@@ -22,30 +18,21 @@ These properties can be hidden easily by overriding them, for example:
 ```sh
 resetprop -n -p init.svc.adb_root ""
 resetprop -n -p service.adb.root ""
-
-# by RainyXeon and Jan
-resetprop init.svc.adb_root stopped
-resetprop init.svc.adbd stopped
-resetprop persist.sys.usb.config mtp
-resetprop ro.adb.secure 1
-resetprop ro.secure 1
-resetprop ro.debuggable 0
-resetprop service.adb.root 0
 ```
 
-**Note:** These properties will reset on reboot.
+**Note:** These properties will reset on reboot. You can use my example module in Release tab as a fix for every reboot
 
 ## Maps detection
 
 BShield can also detect whether the memory maps contain traces of **LineageOS** or injection-related entries.  
 
-You can verify this using the **Native Detector** tool ([download](https://dl.reveny.me/)). 
+You can verify this using the **Native Detector** tool ([download](https://dl.reveny.me/)).
 
 For example, it may report "Injection Detection" or "LineageOS Detected (14)".  
 Alternatively, you can check manually with:
 
 ```sh
-cat /proc/self/maps | grep "lineage"
+cat /proc/self/maps | grep "framework-res.jar"
 ```
 
 **Bypassing maps detection:**
@@ -53,7 +40,8 @@ cat /proc/self/maps | grep "lineage"
 Hiding these entries is difficult. To avoid LineageOS traces, you may need to modify your AOSP/Pixel-based custom ROM.
 
 **Here is some solution:**
-- If your kernel supports KernelSU + SuSFS (with SUS_MAP enabled), you can add the leaked map paths to the SuSFS map list. 
+
+- If your kernel supports KernelSU + SuSFS (with SUS_MAP enabled), you can add the leaked map paths to the SuSFS map list.
 - If you're using font module, it may also leak map entries. Remove it or add its paths to SUS_MAP as mentioned above.
 - You can also try Pedro's TreatWheel module to hide maps, but its effectiveness is limited and it requires a ReZygisk build to operate.
 
@@ -64,10 +52,13 @@ This is a common detection used by many applications. It is strongly recommended
 If your ROM is running with **permissive SELinux**, certain attacks may be possible. BShield requires **SELinux** to be set to **Enforced** to function properly.
 
 **Solution:**
+
 - Set SELinux to **Enforcing**
+
 ```sh
 setenforce 1
 ```
+
 - Use a kernel or ROM with **Enforcing SELinux**
 
 ## Package name detection
@@ -94,7 +85,7 @@ to hide these apps.
 
 ## Leaks from custom launchers
 
-BShield can detect many custom launcher modules, possibly through mounts, memory maps, or other indicators. 
+BShield can detect many custom launcher modules, possibly through mounts, memory maps, or other indicators.
 
 **Solution:**  
 The simplest approach is to remove custom launchers and use the default system launcher. Alternatively, using standard app launchers typically does not trigger detection.
@@ -110,7 +101,7 @@ If you are still experiencing this detection, check your ReZygisk or ZygiskNext 
 
 In recent versions of VNeID (CA-E005 error), the app behaves strangely, such as kicking the user out after already logging in. The detection response also appears slower than usual.
 
-It is currently unclear what BShield is detecting here. 
+It is currently unclear what BShield is detecting here.
 
 **Solution:**  
 A temporary workaround is to add the package name (`com.vnid`) to the **TrickyStore** `target.txt` file.  

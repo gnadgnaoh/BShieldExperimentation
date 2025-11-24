@@ -1,11 +1,6 @@
-<p align="center">
-  <img src="https://git.bnamm.org/namm/BSE-Improved/raw/branch/main/assets/logo.png" width="800" />
-</p>
+# BSheild Experimentation (BSE)
 
-
-<p align="center">
-  <strong>This project is used for researching and testing the detections implemented by BShield for their Android mobile application.</strong>
-</p>
+This project is used for researching and testing the detections implemented by BShield for their Android mobile application.
 
 > [!CAUTION]
 > **This project is for educational purposes only. The intention is to highlight the weaknesses of current security solutions and to encourage the development of better, more reliable alternatives. Use this information responsibly. Do NOT use this for malicious intent. I am not responsible for the actions taken by users of this module or project.**
@@ -25,5 +20,6 @@ See more on [docs/DETECTION.md](docs/DETECTION.md).
 This project is under [The 3-Clause BSD License](LICENSE).
 
 ## Credit
+
 - [Renia in RainyLand](https://t.me/RainyXeon)
 - [Jan](tg://user?id=6699410787)
