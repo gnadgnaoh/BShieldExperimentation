@@ -1,12 +1,18 @@
-# BShield Experimentation
+<p align="center">
+  <img src="https://git.bnamm.org/namm/BSE-Improved/raw/branch/main/assets/logo.png" width="800" />
+</p>
 
-This is the project where we do research and test some detection which BShield detect for their android mobile app.
 
-## What's BShield
+<p align="center">
+  <strong>This project is used for researching and testing the detections implemented by BShield for their Android mobile application.</strong>
+</p>
 
-They explain more in their website <https://www.bshield.io/en>. Basically we can see that's the security solution company to protect their customer from attacks.
 
-This project is already implemented in some vietnamee app like: VNeID, Techcombank, ...
+## What is BShield?
+
+BShield is a **comprehensive mobile security platform** that protects Android applications against threats, fraud, and unauthorized access. It offers continuous threat detection, device risk scoring, and multi-layered protection to ensure the safety of both users and businesses.
+
+BShield is currently implemented in several leading Vietnamese apps such as VNeID, Techcombank, and others.
 
 ## What we know about BShield android root detection
 
