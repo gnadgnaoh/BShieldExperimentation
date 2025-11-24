@@ -1,6 +1,0 @@
-id=resetprop
-name=ResetProp
-version=v1
-versionCode=1
-author=RainyXeon
-description=Simple module to reset prop for BShield on boot.
