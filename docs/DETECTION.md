@@ -22,7 +22,7 @@ This document lists all the detections observed in BShield for Android. The info
     - [\[UNCONFIRMED\] Bootloader check, `syscall` check](#unconfirmed-bootloader-check-syscall-check)
     - [\[UNCONFIRMED\] KSU/AP module image proc loop detection](#unconfirmed-ksuap-module-image-proc-loop-detection)
   - [Error Code 6 (Unlocked Bootloader Detection, Unused)](#error-code-6-unlocked-bootloader-detection-unused)
-  - [Error Code 7 (App Detection, Rare, Unused)](#error-code-7-app-detection-rare-unused)
+  - [Error Code 7 (App Detection, Rare)](#error-code-7-app-detection-rare)
   - [Error Code 8 (Privacy Space Like App Detection)](#error-code-8-privacy-space-like-app-detection)
   - [Error Code 10 (ADB Debug Mode Detection)](#error-code-10-adb-debug-mode-detection)
   - [Error Code 11 (Developer Mode Detection)](#error-code-11-developer-mode-detection)
@@ -31,7 +31,7 @@ This document lists all the detections observed in BShield for Android. The info
 
 **Reference link:** <https://vneid.gov.vn/shield-warning?code=1>
 
-This error occurs when you install unsigned app or modified app. For patch app developers, currently I can't find anyways so your you can try but it may tough to make it working.
+This error occurs when you install unsigned app or modified app. For patch app developers, currently I can't find any ways to make it working. So you can try, but it will be tough to make it working.
 
 **Solution:** Remove the modified, unsigned app from your system and install from Google Play.
 
@@ -41,7 +41,7 @@ This error occurs when you install unsigned app or modified app. For patch app d
 
 This error occurs when you install the app in the vitural machine.
 
-**Solution:** Don't install the app in the vitural machine.
+**Solution:** Don't install the app in the vitural machine (Obviously :v).
 
 ## Error Code 3 (App List Detection)
 
@@ -71,7 +71,7 @@ Or if you don't use root, just don't install the root manager app in your device
 
 **Reference link:** <https://vneid.gov.vn/shield-warning?code=4>
 
-This error occurs when you use google's debug tools to run. This won't happen in the production build of the app. If you experience this error, please contact the app developers or lemme know.\
+This error occurs when you use google's debug tools to run. This won't happen in the production build of the app. If you experience this error, please contact the app developers or let me know.
 
 ## Error Code 5 (Root Detection, Rare)
 
@@ -226,7 +226,7 @@ For example, it may report "KSU/AP loop" or something similar like that.
 
 **Reference link:** <https://vneid.gov.vn/shield-warning?code=6>
 
-This error occurs when you have unlocked bootloader. This kind of deteciton is not avaliable in most of BShield powered app. But if it's do, may see the solution below
+This error occurs when you have unlocked bootloader. This kind of deteciton is not avaliable in most of BShield powered app. But if it's avaliable in the future, may see the solution below.
 
 **Solution:**
 
@@ -236,11 +236,11 @@ Install [TrickyStore](https://github.com/5ec1cff/TrickyStore), put the package n
 com.vnid
 ```
 
-## Error Code 7 (App Detection, Rare, Unused)
+## Error Code 7 (App Detection, Rare)
 
 **Reference link:** <https://vneid.gov.vn/shield-warning?code=7>
 
-This error occurs when you have some suspicious app in your device. We don't experience this detection and it rares to see that.
+This error occurs when you have some suspicious app in your device. We don't experience this detection and it's rare to see that.
 
 **Solution:** same as [error code 3](#error-code-3-app-list-detection).
 
