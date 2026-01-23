@@ -172,6 +172,8 @@ Another classic detection used by many applications, BShield checks the installe
 Below is the list of apps that BShield currently detects (there may be more; these are only the ones confirmed through testing. Feel free to request updates in the Issues tab):
 
 ```txt
+com.topjohnwu.magisk
+com.drdisagree.iconify
 com.rifsxd.ksunext
 me.bmax.apatch
 me.weishu.kernelsu
@@ -199,7 +201,7 @@ In some releases of VNeID, BShield was able to detect if the app was being hooke
 **Solution:**  
 If you are still experiencing this detection, check your ReZygisk or ZygiskNext version.
 
-### [UNCONFIRMED] Bootloader check, `syscall` check
+### Bootloader check, `syscall` check (weird behavior)
 
 In recent versions of VNeID (CA-E005 error), the app behaves strangely, such as kicking the user out after already logging in. The detection response also appears slower than usual.
 
