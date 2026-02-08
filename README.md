@@ -11,9 +11,10 @@ BShield is a **comprehensive mobile security platform** that protects Android ap
 
 BShield is currently implemented in several leading Vietnamese apps such as VNeID, Techcombank, and others.
 
-## List of detection
+## Documents about BShield root detection
 
-See more on [docs/DETECTION.md](docs/DETECTION.md).
+- [English](docs/DETECTION.md)
+- [Vietnamese](docs/DETECTION_vi_vn.md)
 
 ## License
 
