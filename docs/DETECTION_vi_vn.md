@@ -260,7 +260,12 @@ Không sử dụng ứng dụng bên trong app của bên thứ ba.
 Lỗi này xảy ra khi bạn bật chế độ debug ADB trên thiết bị.
 
 **Cách khắc phục:**
-Thực hành an toàn: không bật ADB debug khi không cần dùng.
+Bạn hãy sử dụng module KSU/Magisk và module LSposed dưới đây (ưu tiên FOSS):
+
+- [ReLSPosed](https://github.com/ThePedroo/ReLSPosed)
+- [HMA-OSS](https://github.com/frknkrc44/HMA-OSS)
+
+để ẩn debug ADB
 
 ## Mã lỗi 11 (Phát hiện chế độ nhà phát triển)
 
@@ -273,7 +278,7 @@ Lỗi này xảy ra khi bạn bật Developer Mode trên thiết bị.
 Bạn hãy sử dụng module KSU/Magisk và module LSposed dưới đây (ưu tiên FOSS):
 
 - [ReLSPosed](https://github.com/ThePedroo/ReLSPosed)
-- [ImNotADeveloper](https://github.com/notyour777/ImNotADeveloper)
+- [HMA-OSS](https://github.com/frknkrc44/HMA-OSS)
 
 để ẩn Developer Mode và ADB debug mode.
 
