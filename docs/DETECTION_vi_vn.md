@@ -336,6 +336,8 @@ Cài đặt [JingMatrix/TEESimulator](https://github.com/JingMatrix/TEESimulator
 Dựa vào [nghiên cứu của team FPT Night-Wolf](https://blogs.night-wolf.io/ai-assisted-on-rasp-analysis), ta biết được rằng mã 12 còn kiểm tra thêm 
 `ro.build.display.id` và `ro.build.keys` xem có chứa `test-keys` không. Bạn có thể dùng module của chúng tôi như một cách tạm thời sửa lỗi này.
 
+Chuẩn bị update cho Lineage và Lineage base
+
 ## Mã lỗi 13 (Phát hiện thiết bị đang chạy dịch vụ trợ năng đang chạy)
 
 **Link tham khảo:** <https://s.bshield.io/?code=13>
