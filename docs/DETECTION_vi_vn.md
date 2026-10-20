@@ -336,7 +336,13 @@ Cài đặt [JingMatrix/TEESimulator](https://github.com/JingMatrix/TEESimulator
 Dựa vào [nghiên cứu của team FPT Night-Wolf](https://blogs.night-wolf.io/ai-assisted-on-rasp-analysis), ta biết được rằng mã 12 còn kiểm tra thêm 
 `ro.build.display.id` và `ro.build.keys` xem có chứa `test-keys` không. Bạn có thể dùng module của chúng tôi như một cách tạm thời sửa lỗi này.
 
-Chuẩn bị update cho Lineage và Lineage base
+Đây là mục dành riêng cho VNeID
+VNeID từ phiên bản 2.2.12 đã bật phát hiện custom ROM
+RainyXeon đã phát hiện ra BShield quét custom rom bằng keyword "Lineage" trong /system_ext, /system, /product và /system/addon.d
+Cách khắc phục dùng SUSFS để ẩn những file chứa keyword "Lineage" này khỏi app bằng sus_path nhưng có vấn đề xảy ra là không phải ai cũng có thể thay kernel có SUSFS cũng như ghim SUSFS cho non-gki rất khó nên Xes đã có ý tưởng
+Cũng làm ở mức kernel nhưng ghim dễ hơn chính là dùng nomount, nomount và sus_path đều dùng virtual file system (VFS), nomount sẽ dùng rules whiteout để ẩn hoàn toàn những mục có keyword "Lineage" trong /system_ext, /system, /product và /system/addon.d khỏi VNeID (Xes cũng đã yêu cầu support whiteout vào nomount lúc trước) 
+Nomount hiện có thể ghim bằng build kernel hoặc như cài module META bình thường khác
+Hiện tại giải thích cơ chế detect và module bypass sẽ được phát hành sau 
 
 ## Mã lỗi 13 (Phát hiện thiết bị đang chạy dịch vụ trợ năng đang chạy)
 
