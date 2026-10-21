@@ -243,9 +243,11 @@ Ví dụ, nó có thể báo "Suspicious Mount".
 - Trên một số thiết bị, ReZygisk không thể unmount một số path. Nếu bạn gặp lỗi này, hãy báo cho tôi.
 
 **KSU 3:**
-- Đối với KSU 3 trở lên thì phải dùng Meta module magicmount module hoặc hybrid mount để tránh bị lộ mount 
-- Magicmount module: https://github.com/KernelSU-Modules-Repo/meta-mm/releases
-- Hybrid mount: https://github.com/Hybrid-Mount/meta-hybrid_mount/releases
+- Đối với KSU 3 trở lên thì phải dùng metamodule để tránh bị lộ mount, chúng tôi khuyên dùng các metamodule dưới đây
+- Nomount: https://github.com/maxsteeel/nomount (nếu máy bạn là GKI2 hoặc non-gki đã ghim vào kernel thì ưu tiên dùng nm)
+- Magicmount module: https://github.com/KernelSU-Modules-Repo/meta-mm/releases (tương thích tốt nhất)
+- Hybrid mount: https://github.com/Hybrid-Mount/meta-hybrid_mount/releases (nếu muốn dùng overlayfs)
+
 
 ### [CHƯA XÁC NHẬN] Phát hiện vòng lặp image proc của module KSU/AP
 
