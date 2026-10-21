@@ -245,7 +245,7 @@ Ví dụ, nó có thể báo "Suspicious Mount".
 **KSU 3:**
 - Đối với KSU 3 trở lên thì phải dùng metamodule để tránh bị lộ mount, chúng tôi khuyên dùng các metamodule dưới đây
 - Nomount: https://github.com/maxsteeel/nomount (nếu máy bạn là GKI2 hoặc non-gki đã ghim vào kernel thì ưu tiên dùng nm)
-- Magicmount module: https://github.com/KernelSU-Modules-Repo/meta-mm/releases (tương thích tốt nhất)
+- Magicmount module: https://github.com/backslashxx/meta-magic_mount (tương thích tốt nhất)
 - Hybrid mount: https://github.com/Hybrid-Mount/meta-hybrid_mount/releases (nếu muốn dùng overlayfs)
 
 
